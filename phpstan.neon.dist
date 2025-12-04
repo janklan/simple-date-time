@@ -1,0 +1,9 @@
+parameters:
+    level: 8
+    parallel:
+        maximumNumberOfProcesses: 12
+    paths:
+        - src
+        - tests
+    bootstrapFiles:
+        - vendor/autoload.php
