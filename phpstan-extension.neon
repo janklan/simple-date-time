@@ -1,0 +1,5 @@
+services:
+    -
+        class: JanKlan\SimpleDateTime\PHPStan\ForbidDateTimeComparisonRule
+        tags:
+            - phpstan.rules.rule

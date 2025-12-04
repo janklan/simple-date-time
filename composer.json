@@ -1,0 +1,65 @@
+{
+    "name": "janklan/simple-date-time",
+    "description": "Timezone-agnostic Date and Time value objects for PHP",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "date",
+        "time",
+        "datetime",
+        "timezone-agnostic",
+        "value-object",
+        "immutable"
+    ],
+    "authors": [
+        {
+            "name": "Jan Klan",
+            "email": "jan@klan.com.au"
+        }
+    ],
+    "require": {
+        "php": "^8.3"
+    },
+    "require-dev": {
+        "brianium/paratest": "^7.15",
+        "ergebnis/composer-normalize": "^2.48",
+        "friendsofphp/php-cs-fixer": "^3.91",
+        "phpmd/phpmd": "^2.15",
+        "phpstan/phpdoc-parser": "^2.3",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^12.0",
+        "rector/rector": "^2.2",
+        "roave/security-advisories": "dev-latest"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "JanKlan\\SimpleDateTime\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JanKlan\\SimpleDateTime\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        },
+        "sort-packages": true
+    },
+    "scripts": {
+        "cs": "vendor/bin/php-cs-fixer fix",
+        "phpstan": "vendor/bin/phpstan",
+        "preflight": [
+            "@cs",
+            "@phpstan",
+            "@test"
+        ],
+        "rector": [
+            "vendor/bin/rector",
+            "@cs"
+        ],
+        "test": "vendor/bin/paratest"
+    }
+}
